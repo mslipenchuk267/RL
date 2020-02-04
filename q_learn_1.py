@@ -4,13 +4,13 @@ env = gym.make("MountainCar-v0")
 
 LEARNING_RATE = 0.1 # decay
 DISCOUNT = 0.95 # A weight, a measure of how important we find future action over current actions
-EPISODES = 2000
+EPISODES = 25000
 
-SHOW_EVERY = 500 # every 500 episodes
+SHOW_EVERY = 2000 # every 500 episodes
 
 # This sets 20 discrete observations (chunks) for the dimension of the os
 # Don't have to make DISCRETE_OS_SIZE have same amount of buckets for each observation
-DISCRETE_OS_SIZE= [20] * len(env.observation_space.high) # 20 x 20
+DISCRETE_OS_SIZE= [40] * len(env.observation_space.high) # 20 x 20
 discrete_os_win_size = (env.observation_space.high - env.observation_space.low) / DISCRETE_OS_SIZE
 
 epsilon = 0.5 # epsilon is a measure of how much random action you want to take
